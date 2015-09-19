@@ -4,9 +4,9 @@ require "fileutils"
 require "require_all"
 require_all "plugins/*.rb"
 
-token = '125576910:AAGlci0-lu_m0I_pFAI_XFuGeh8iDEEBDR4'
+token = 'apikey'
 Telegram::Bot::Client.run(token, logger: Logger.new($stdout)) do |bot|
-    bot.enable_botan!('836626c5-303d-4b36-9935-18bca9b1c954')
+    bot.enable_botan!('apikey')
   bot.listen do |message|
     if message.text.include? " "
     input = message.text[0,message.text.index(' ')]
